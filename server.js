@@ -1,3 +1,8 @@
+process.on('uncaughtException', (err) => {
+    console.error('CRASHED:', err);
+    process.exit(1);
+});
+
 const express = require('express');
 const app = express();
 app.use(express.json());
